@@ -1,0 +1,97 @@
+.liLight,
+.liDark,
+.liDone {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	font-size: 2.5rem;
+	padding: 0.4em;
+	background-color: white;
+	box-shadow: 0 0 5px black;
+	border-radius: 15px;
+	cursor: grab;
+	user-select: none;
+
+	.btnsOptionArea {
+		display: flex;
+		gap: 0.4em;
+
+		.btnPriorityLow {
+			color: green;
+		}
+
+		.btnPriorityMedium {
+			color: orange;
+		}
+		.btnPriorityHigh {
+			color: orangered;
+		}
+
+		.btnEdit {
+			color: rgb(76, 159, 253);
+		}
+
+		.btnDone {
+			color: rgb(216, 73, 216);
+		}
+
+		.btnDeleteLight {
+			color: rgb(54, 54, 54);
+		}
+
+		.btnDeleteDark {
+			color: rgb(245, 245, 245);
+		}
+
+		.btnPriority,
+		.btnEdit,
+		.btnDone,
+		.btnDeleteLight,
+		.btnDeleteDark {
+			transition: color 0.3s;
+		}
+
+		.btnEdit:hover {
+			color: rgb(82, 132, 189);
+		}
+
+		.btnDone:hover {
+			color: rgb(170, 58, 170);
+		}
+
+		.btnDeleteLight:hover {
+			color: black;
+		}
+
+		.btnDeleteDark:hover {
+			color: rgb(219, 219, 219);
+		}
+	}
+}
+
+.liDark {
+	background-color: rgb(51, 51, 51);
+	color: white;
+	box-shadow: 0 0 5px white;
+}
+
+.liDone {
+	text-decoration: line-through;
+	background: rgb(105, 105, 105);
+	background: linear-gradient(
+		90deg,
+		rgba(105, 105, 105, 1) 0%,
+		rgba(137, 137, 137, 1) 50%,
+		rgba(105, 105, 105, 1) 100%
+	);
+	color: rgb(226, 226, 226);
+	.btnsOptionArea {
+		.btnPriority,
+		.btnEdit,
+		.btnDone,
+		.btnDeleteLight {
+			color: rgb(226, 226, 226);
+		}
+	}
+}

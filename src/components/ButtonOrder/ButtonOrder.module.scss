@@ -1,0 +1,73 @@
+.btnsOrder {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	width: 100px;
+
+	.btnLowOrder,
+	.btnMediumOrder,
+	.btnHighOrder,
+	.btnLowOrderActive,
+	.btnMediumOrderActive,
+	.btnHighOrderActive {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2.5em;
+		width: 2.5em;
+		font-size: 2.6rem;
+		border: none;
+		box-shadow: 0 0 5px black;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		transition: box-shadow 0.3s, animation 0.3s;
+		cursor: pointer;
+	}
+
+	.btnLowOrder,
+	.btnLowOrderActive {
+		color: green;
+	}
+
+	.btnMediumOrder,
+	.btnMediumOrderActive {
+		color: orange;
+	}
+
+	.btnHighOrder,
+	.btnHighOrderActive {
+		color: orangered;
+	}
+
+	.btnLowOrderActive,
+	.btnMediumOrderActive,
+	.btnHighOrderActive {
+		animation: active-btn 1s ease-in-out forwards;
+
+		@keyframes active-btn {
+			from {
+				transform: scale(1);
+				box-shadow: 0 0 5px black;
+			}
+
+			to {
+				transform: scale(1.15);
+				box-shadow: 0 0 10px rgb(36, 137, 252);
+			}
+		}
+	}
+
+	.btnLowOrder:hover,
+	.btnMediumOrder:hover,
+	.btnHighOrder:hover {
+		box-shadow: 0 0 10px rgb(22, 88, 163);
+	}
+
+	.btnText {
+		font-size: 2.1rem;
+		color: white;
+		user-select: none;
+	}
+}
